@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'LittleLemonAPI',
     'rest_framework.authtoken',
     'djoser',
+    'rest_framework_simplejwt'
 ]
 
 MIDDLEWARE = [
@@ -135,6 +136,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_xml.renderers.XMLRenderer',
     ),
     'DEFAULT_THROTTLE_RATES': {
         'anon':'2/minute',
